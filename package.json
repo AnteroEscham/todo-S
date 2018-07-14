@@ -1,0 +1,40 @@
+{
+  "name": "pikabu",
+  "version": "4.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "homepage": "",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
+    "build": "webpack -p --progress --mode production --config webpack.config.build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^8.6.2",
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "1.7.0",
+    "clean-webpack-plugin": "0.1.19",
+    "cross-env": "5.1.6",
+    "css-loader": "0.28.11",
+    "eslint": "^5.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "file-loader": "1.1.11",
+    "html-webpack-plugin": "3.2.0",
+    "node-sass": "4.9.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "7.0.1",
+    "style-loader": "0.21.0",
+    "url-loader": "1.0.1",
+    "webpack": "4.8.3",
+    "webpack-cli": "2.1.4",
+    "webpack-dev-server": "3.1.4",
+    "webpack-merge": "4.1.2"
+  }
+}

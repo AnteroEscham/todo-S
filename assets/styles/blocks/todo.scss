@@ -1,0 +1,178 @@
+.todo {
+    display: flex;
+    align-items: center;
+    padding-top: 10%;
+    flex-direction: column;
+
+    &__block {
+        margin-top: 3%;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    &__logo {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $brown;
+        font-weight: bold;
+        font-size: 40px;
+
+        &:after {
+            content: "'S";
+            color: $green;
+            font-size: 45px;
+        }
+    }
+
+    &__add {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px 10px;
+        font-family: $font;
+        outline-color: $brown;
+    }
+
+    &__enter {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+        background-color: $grey;
+        text-transform: uppercase;
+        border: 1px solid $grey-border;
+        font-size: 12px;
+        padding: 0 25px;
+        outline-color: $brown;
+        transition: 0.3s;
+
+        &:hover {
+            border: 1px solid $green;
+        }
+    }
+
+    &__list {
+        margin-top: 10px;
+        background-color: #fff;
+        min-height: 50px;
+        box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.14);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+        border-top: 1px solid $grey;
+
+        &:last-child {
+            border-bottom: 1px solid $grey;
+        }
+
+        &--completed {
+
+            & .todo__name {
+                text-decoration:line-through;
+                color: $grey-border;
+            }
+        }
+
+        &:hover {
+
+            & .todo__close {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__check-input {
+        display: none;
+
+        &:checked + .todo__check-btn {
+            background: $green url('../images/check.svg') center/60% no-repeat;
+            border-color: $green;
+        }
+    }
+
+    &__check-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid $grey;
+        margin-right: 20px;
+        cursor: pointer;
+        display: block;
+
+        &:hover {
+            border-color: $green;
+        }
+    }
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        background: url('../images/close.svg') center/50% no-repeat;
+        margin-left: auto;
+        flex-shrink: 0;
+        cursor: pointer;
+        border: 1px solid $red;
+        border-radius: 50%;
+        opacity: 0;
+
+        @include max-width(1024px) {
+            opacity: 1;
+        }
+
+
+    }
+
+    &__controls {
+        background-color: #fff;
+        box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.14);
+        padding: 15px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__states {
+        display: inline-flex;
+    }
+
+    &__state {
+        margin: 0 10px;
+        color: $brown;
+        padding: 5px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: border-color 0.2s;
+
+        @include max-width(568px) {
+            margin: 0 2px;
+        }
+
+        &--active {
+            border-color: $brown;
+            cursor: default;
+        }
+
+        &:hover {
+            border-color: $brown;
+        }
+    }
+
+    &__clear {
+        text-decoration: none;
+        color: $brown;
+        border: 1px solid $green;
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+}
+
+
+.hidden {
+    display: none;
+}

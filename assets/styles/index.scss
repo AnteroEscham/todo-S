@@ -1,0 +1,20 @@
+//variables
+$grey: #F4F4F4;
+$green: #8AC858;
+$brown: rgb(65, 52, 52);
+$font-color: #000;
+$grey-border: #A9A9A9;
+$red: #970C0C;
+
+$font: 'Fira Sans', sans-serif;
+
+//config
+@import "config/mixins.scss";
+@import "config/base.scss";
+@import "config/normalize.scss";
+
+//layout
+@import "layout/adjustment.scss";
+
+//blocks
+@import "blocks/todo";
